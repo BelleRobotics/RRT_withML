@@ -1,0 +1,16 @@
+'''
+#NN thats 50% accurate
+#import tensorflow as tf
+#from keras.models import Sequential
+#from keras.layers import Dense, Flatten
+#Model NN with L1 - 800 and L2 - 160000
+model = Sequential([
+	Dense(800, activation = 'relu'),
+	Dense(16000, activation = 'relu'),
+	Dense(201)])
+
+model.compile(optimizer='Adam',loss='mean_absolute_error',
+              metrics=['accuracy'])
+model.optimizer.lr.assign(0.00001)
+model.fit(input_data,output_data,epochs=15)
+'''
